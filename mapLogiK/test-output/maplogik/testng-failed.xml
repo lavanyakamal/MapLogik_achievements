@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [maplogik]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="maplogik(failed)">
+    <classes>
+      <class name="com.testCases.Get_student_info_testcases">
+        <methods>
+          <include name="closebrowser"/>
+          <include name="student_info"/>
+        </methods>
+      </class> <!-- com.testCases.Get_student_info_testcases -->
+    </classes>
+  </test> <!-- maplogik(failed) -->
+</suite> <!-- Failed suite [maplogik] -->

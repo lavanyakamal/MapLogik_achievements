@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [student_login]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="student_account_activation(failed)">
+    <classes>
+      <class name="com.testCases.Account_activation_testcase">
+        <methods>
+          <include name="account_activation"/>
+          <include name="openBrowser"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- com.testCases.Account_activation_testcase -->
+    </classes>
+  </test> <!-- student_account_activation(failed) -->
+</suite> <!-- Failed suite [student_login] -->
