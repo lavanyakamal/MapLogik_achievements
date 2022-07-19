@@ -18,7 +18,7 @@ public class Technical_record_testcases extends CommonFunctions {
 	@Test(priority=1)
 	public static void technical_record() throws IOException, InterruptedException {
 		openBrowser_student();
-		Student_login_testcases.login();
+	//	Student_login_testcases.login();
 		PageFactory.initElements(driver, Technical_record_objects.class);
 
 		WebDriverWait wait=explicit_wait();
@@ -85,7 +85,7 @@ public class Technical_record_testcases extends CommonFunctions {
 	@Test(dependsOnMethods="technical_record_approval")
 	public static void takescreenshot() throws IOException, InterruptedException {
 		openBrowser_student();
-		Student_login_testcases.login();
+	//	Student_login_testcases.login();
 		Thread.sleep(5000);
 		screenshot();
 	}

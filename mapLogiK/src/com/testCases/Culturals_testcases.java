@@ -18,7 +18,7 @@ public class Culturals_testcases extends CommonFunctions {
 	@Test(priority=1)
 	public static void culturals() throws IOException, InterruptedException {
 		openBrowser_student();
-		Student_login_testcases.login();
+	//	Student_login_testcases.login();
 		PageFactory.initElements(driver, Culturals_objects.class);
 
 		WebDriverWait wait=explicit_wait();
@@ -62,7 +62,7 @@ public class Culturals_testcases extends CommonFunctions {
 	@Test(dependsOnMethods="culturals_approval")
 	public static void takescreenshot() throws IOException, InterruptedException {
 		openBrowser_student();
-		Student_login_testcases.login();
+	//	Student_login_testcases.login();
 		Thread.sleep(5000);
 		screenshot();
 	}

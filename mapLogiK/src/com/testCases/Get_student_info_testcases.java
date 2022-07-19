@@ -15,7 +15,7 @@ import com.pageObjects.Get_student_info_objects;
 public class Get_student_info_testcases extends CommonFunctions {
 	
 	@Test
-	public static void student_info() throws IOException {
+	public static void student_info() throws IOException, InterruptedException {
 		
 		openBrowser_student();
 		Student_login_testcases.login();

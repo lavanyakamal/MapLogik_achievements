@@ -15,6 +15,7 @@ import com.pageObjects.Co_curricular_objects;
 
 public class Co_curricular_testcase extends CommonFunctions {
 	
+	
 	@Test
 	public static void certificate() throws IOException, InterruptedException {
 		
@@ -59,7 +60,7 @@ public class Co_curricular_testcase extends CommonFunctions {
 	}
 	
 	@Test(dependsOnMethods="certificate")
-	public void admin_approval() throws InterruptedException, IOException {
+	public static void admin_approval() throws InterruptedException, IOException {
 		
 		openBrowser_admin();
 		Admin_login_testcases.admin_login();
@@ -81,15 +82,14 @@ public class Co_curricular_testcase extends CommonFunctions {
 	@Test(dependsOnMethods="admin_approval")
 	public static void takescreenshot() throws IOException, InterruptedException {
 		openBrowser_student();
-		Student_login_testcases.login();
+    	Student_login_testcases.login();
 		Thread.sleep(5000);
 		screenshot();
 	}
 
 	@AfterMethod
 	public static void closebrowser() {
-		driver.close();
+	//	driver.close();
 	}
-
 
 }

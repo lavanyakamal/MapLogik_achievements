@@ -1,5 +1,8 @@
 package com.baseClass;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.datatransfer.StringSelection;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -9,6 +12,7 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
+import java.util.Scanner;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.DataFormatter;
@@ -20,12 +24,14 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.DataProvider;
 
 public class CommonFunctions {
 	
@@ -38,9 +44,9 @@ public class CommonFunctions {
 	public static XSSFSheet sheet=null;
 	public static List username=new ArrayList();
 	public static List password=new ArrayList();
-	public static String index_s;
-	public static int index;
+	public static int index=0;
 	public static FileWriter file_write=null;
+//	public static String info[][]=null;
 	
 	public static WebDriverWait explicit_wait() {
 	WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -106,10 +112,31 @@ public class CommonFunctions {
 		properties=new Properties();
 		properties.load(input);
 	}
+	
+	public static void add_profilePic_properties() throws IOException{
+		FileInputStream input=new FileInputStream("C:\\Users\\Lavanya\\git\\MapLogik_achievements\\mapLogiK\\src\\com\\baseClass\\add_profilePicture.properties");
+		properties=new Properties();
+		properties.load(input);
+	}
+	
+	public static Robot robot_class() throws AWTException {
+		Robot robot=new Robot();
+		return robot;
+	}
+	
+	public static StringSelection stringSelection(String s) {
+		StringSelection string=new StringSelection(s);
+		return string;
+	}
 
 	public static Select select_class(WebElement element) {
 		Select select=new Select(element);
 		return select;
+	}
+	
+	public static Actions action_class() {
+		Actions action=new Actions(driver);
+		return action;
 	}
 	
 	public static FileWriter file_writer() throws IOException {
@@ -130,10 +157,15 @@ public class CommonFunctions {
 		driver=new ChromeDriver();
 		driver.get(admin_url);
 		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().window().maximize();
 	}
 	
 	public static void openBrowser_student() throws IOException {
 		loadProperties();
+		
+		Scanner scan=new Scanner(System.in);
+		System.out.println("enter index");
+		index=scan.nextInt();   
 		
 		String driver_location=properties.getProperty("driver_location");
 		String student_url=properties.getProperty("student_url");
@@ -143,18 +175,21 @@ public class CommonFunctions {
 		driver=new ChromeDriver();
 		driver.get(student_url);
 		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().window().maximize();
 	}
 	
 	public static void excel_username_extraction() throws IOException {
 		loadProperties();
-		index_s=properties.getProperty("student_index");
+	/*	index_s=properties.getProperty("student_index");
 		index=Integer.parseInt(index_s);
+		System.out.println(index);   */
 		
-		file=new File(properties.getProperty("file_location"));
+		file=new File("D:\\MapLogiK\\trust college\\trust combined.xlsx");
 		input=new FileInputStream(file);
 		workbook=new XSSFWorkbook(input);
 		sheet=workbook.getSheetAt(0);
 		row_no=sheet.getLastRowNum();
+	//	System.out.println(row_no);
 		int column_no=sheet.getRow(0).getLastCellNum();
 		List checker=new ArrayList();
 		DataFormatter data=new DataFormatter();
@@ -175,14 +210,15 @@ public class CommonFunctions {
 	
 	public static void excel_password_extraction() throws IOException {
 		loadProperties();
-		String index_s=properties.getProperty("student_index");
-		index=Integer.parseInt(index_s);
+	/*	String index_s=properties.getProperty("student_index");
+		index=Integer.parseInt(index_s);   */
 		
-		file=new File(properties.getProperty("file_location"));
+		file=new File("D:\\MapLogiK\\trust college\\trust combined.xlsx");
 		input=new FileInputStream(file);
 		workbook=new XSSFWorkbook(input);
 		sheet=workbook.getSheetAt(0);
 		row_no=sheet.getLastRowNum();
+		System.out.println(row_no);
 		int column_no=sheet.getRow(0).getLastCellNum();
 		List checker=new ArrayList();
 		DataFormatter data=new DataFormatter();
@@ -195,15 +231,16 @@ public class CommonFunctions {
 		int user_index=checker.indexOf("student_mobile");
 		for(int i=1;i<=row_no;i++) {
 		Cell cell_value=sheet.getRow(i).getCell(user_index);
-		String student_id=data.formatCellValue(cell_value);
-		password.add(student_id);
+		String student_mobile=data.formatCellValue(cell_value);
+		password.add(student_mobile);
+	//	System.out.println(student_mobile);
 		}
 	}
 	
 	public static void screenshot() throws IOException,InterruptedException {
 		TakesScreenshot screenshot=(TakesScreenshot)driver;
 		File source=screenshot.getScreenshotAs(OutputType.FILE);
-		File destination=new File("D:\\MapLogiK\\trust college screenshots\\"+username.get(index)+".png");
+		File destination=new File("D:\\MapLogiK\\trust college screenshots\\after profile picture\\"+username.get(index)+".png");
 		FileHandler.copy(source,destination);
 	}
 	

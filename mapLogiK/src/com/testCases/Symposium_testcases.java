@@ -18,7 +18,7 @@ public class Symposium_testcases extends CommonFunctions {
 	@Test(priority=1)
 	public static void symposium() throws IOException, InterruptedException {
 		openBrowser_student();
-		Student_login_testcases.login();
+	//	Student_login_testcases.login();
 		PageFactory.initElements(driver, Symposium_objects.class);
 		
 		WebDriverWait wait=explicit_wait();
@@ -79,7 +79,7 @@ public class Symposium_testcases extends CommonFunctions {
 	@Test(dependsOnMethods="symposium_approval")
 	public static void takescreenshot() throws IOException, InterruptedException {
 		openBrowser_student();
-		Student_login_testcases.login();
+	//	Student_login_testcases.login();
 		Thread.sleep(5000);
 		screenshot();
 	}

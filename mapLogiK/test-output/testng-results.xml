@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-07-12T19:03:56 IST" name="maplogik" finished-at="2022-07-12T19:04:56 IST" duration-ms="59706">
+  <suite started-at="2022-07-19T19:00:59 IST" name="maplogik" finished-at="2022-07-19T19:01:26 IST" duration-ms="27555">
     <groups>
     </groups>
-    <test started-at="2022-07-12T19:03:56 IST" name="maplogik" finished-at="2022-07-12T19:04:56 IST" duration-ms="59706">
+    <test started-at="2022-07-19T19:00:59 IST" name="maplogik" finished-at="2022-07-19T19:01:26 IST" duration-ms="27555">
       <class name="com.testCases.Get_student_info_testcases">
-        <test-method signature="student_info()[pri:0, instance:com.testCases.Get_student_info_testcases@74fe5c40]" started-at="2022-07-12T19:03:56 IST" name="student_info" finished-at="2022-07-12T19:04:56 IST" duration-ms="59670" status="PASS">
+        <test-method signature="student_info()[pri:0, instance:com.testCases.Get_student_info_testcases@7f3b84b8]" started-at="2022-07-19T19:00:59 IST" name="student_info" finished-at="2022-07-19T19:01:26 IST" duration-ms="27518" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- student_info -->
-        <test-method is-config="true" signature="closebrowser()[pri:0, instance:com.testCases.Get_student_info_testcases@74fe5c40]" started-at="2022-07-12T19:04:56 IST" name="closebrowser" finished-at="2022-07-12T19:04:56 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="closebrowser()[pri:0, instance:com.testCases.Get_student_info_testcases@7f3b84b8]" started-at="2022-07-19T19:01:26 IST" name="closebrowser" finished-at="2022-07-19T19:01:26 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closebrowser -->
