@@ -19,7 +19,7 @@ public class Product_solution_testcase extends CommonFunctions {
 	public static void product_solution() throws IOException, InterruptedException {
 		
 		openBrowser_student();
-	//	Student_login_testcases.login();
+		Student_login_testcases.login();
 		PageFactory.initElements(driver, Product_solution_objects.class);
 		
 		WebDriverWait wait=explicit_wait();
@@ -80,7 +80,7 @@ public class Product_solution_testcase extends CommonFunctions {
 	@Test(dependsOnMethods="product_solution_approval")
 	public static void takescreenshot() throws IOException, InterruptedException {
 		openBrowser_student();
-	//	Student_login_testcases.login();
+		Student_login_testcases.login();
 		Thread.sleep(3000);
 		screenshot();
 	}

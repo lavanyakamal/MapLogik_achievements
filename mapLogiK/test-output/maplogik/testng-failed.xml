@@ -3,12 +3,14 @@
 <suite name="Failed suite [maplogik]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="maplogik(failed)">
     <classes>
-      <class name="com.testCases.Get_student_info_testcases">
+      <class name="com.testCases.Sports_testcases">
         <methods>
           <include name="closebrowser"/>
-          <include name="student_info"/>
+          <include name="takescreenshot"/>
+          <include name="sports"/>
+          <include name="sports_approval"/>
         </methods>
-      </class> <!-- com.testCases.Get_student_info_testcases -->
+      </class> <!-- com.testCases.Sports_testcases -->
     </classes>
   </test> <!-- maplogik(failed) -->
 </suite> <!-- Failed suite [maplogik] -->

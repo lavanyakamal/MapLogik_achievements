@@ -3,7 +3,7 @@
 <suite name="maplogik">
 <test name="maplogik">
 <classes>
-<class name="com.testCases.Get_student_info_testcases">
+<class name="com.testCases.Sports_testcases">
 </class>
 </classes>
 </test>

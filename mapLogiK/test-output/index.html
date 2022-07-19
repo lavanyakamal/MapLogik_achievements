@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,7 +104,17 @@
                     <div class="method-list-content passed suite-maplogik">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-maplogik" title="com.testCases.Get_student_info_testcases" class="method navigator-link" hash-for-method="student_info">student_info</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-maplogik" title="com.testCases.Sports_testcases" class="method navigator-link" hash-for-method="sports">sports</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-maplogik" title="com.testCases.Sports_testcases" class="method navigator-link" hash-for-method="sports_approval">sports_approval</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-maplogik" title="com.testCases.Sports_testcases" class="method navigator-link" hash-for-method="takescreenshot">takescreenshot</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-maplogik -->
@@ -122,14 +132,28 @@
           <div class="suite-maplogik-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.testCases.Get_student_info_testcases</span>
+              <span class="class-name">com.testCases.Sports_testcases</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="student_info">
-                  </a> <!-- student_info -->
-                  <span class="method-name">student_info</span>
+                  <a name="sports">
+                  </a> <!-- sports -->
+                  <span class="method-name">sports</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="sports_approval">
+                  </a> <!-- sports_approval -->
+                  <span class="method-name">sports_approval</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="takescreenshot">
+                  </a> <!-- takescreenshot -->
+                  <span class="method-name">takescreenshot</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -146,7 +170,7 @@
 &lt;suite name=&quot;maplogik&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;maplogik&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.testCases.Get_student_info_testcases&quot;/&gt;
+      &lt;class name=&quot;com.testCases.Sports_testcases&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- maplogik --&gt;
 &lt;/suite&gt; &lt;!-- maplogik --&gt;
@@ -186,16 +210,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'student_info')
-data.setCell(0, 2, 'com.testCases.Get_student_info_testcases')
-data.setCell(0, 3, 27518);
+data.setCell(0, 1, 'sports')
+data.setCell(0, 2, 'com.testCases.Sports_testcases')
+data.setCell(0, 3, 25190);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'takescreenshot')
+data.setCell(1, 2, 'com.testCases.Sports_testcases')
+data.setCell(1, 3, 9540);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'sports_approval')
+data.setCell(2, 2, 'com.testCases.Sports_testcases')
+data.setCell(2, 3, 7551);
 window.suiteTableData['maplogik']= { tableData: data, tableDiv: 'times-div-maplogik'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 27 seconds</span>
+              <span class="suite-total-time">Total running time: 42 seconds</span>
               <div id="times-div-maplogik">
               </div> <!-- times-div-maplogik -->
             </div> <!-- times-div -->
@@ -221,14 +253,30 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.testCases.Get_student_info_testcases</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.testCases.Sports_testcases</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">student_info</span>
+                <span class="method-name">sports</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closebrowser</span>
-                <span class="method-start">27520 ms</span>
+                <span class="method-start">25192 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">sports_approval</span>
+                <span class="method-start">25269 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closebrowser</span>
+                <span class="method-start">32823 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">takescreenshot</span>
+                <span class="method-start">32898 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closebrowser</span>
+                <span class="method-start">42440 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

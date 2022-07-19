@@ -17,7 +17,7 @@ public class Account_activation_testcase extends CommonFunctions {
 	@Test
 	public static void account_activation() throws IOException, InterruptedException {
 		openBrowser_student();
-	//	Student_login_testcases.login();
+		Student_login_testcases.login();
 		PageFactory.initElements(driver, Account_activation_objects.class);
 		String current_window=driver.getWindowHandle();
 		

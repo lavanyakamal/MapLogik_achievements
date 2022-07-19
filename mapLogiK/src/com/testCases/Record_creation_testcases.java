@@ -19,7 +19,7 @@ public class Record_creation_testcases extends CommonFunctions {
 	@Test(priority=1)
 	public static void record_creation() throws IOException, InterruptedException {
 		openBrowser_student();
-	//	Student_login_testcases.login();
+		Student_login_testcases.login();
 		PageFactory.initElements(driver, Record_creation_objects.class);
 
 		WebDriverWait wait=explicit_wait();
@@ -63,7 +63,7 @@ public class Record_creation_testcases extends CommonFunctions {
 	@Test(dependsOnMethods="record_creation_approval")
 	public static void takescreenshot() throws IOException, InterruptedException {
 		openBrowser_student();
-	//	Student_login_testcases.login();
+		Student_login_testcases.login();
 		Thread.sleep(5000);
 		screenshot();
 	}
